@@ -21,7 +21,7 @@ Actually support **only OGNL** expression language.
     
 ### Dependencies version
 
- - Tapestry5 - 5.3.6
+ - Tapestry5 - 5.3.7
  - OGNL - 2.7.3
  - MVEL - **not supported yet**
 

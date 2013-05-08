@@ -2,7 +2,11 @@
 
 ## Description
 
-Actually support only OGNL expression language.
+Actually support **only OGNL** expression language.
+
+### Tapestry template
+
+    <t:mypackage.mycomponent myparameter="el:System.currentTimeMillis()"/>
 
 ### Maven dependency
 

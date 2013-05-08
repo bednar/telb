@@ -1,6 +1,39 @@
+# Compiler Files #
 *.class
 
 # Package Files #
 *.jar
 *.war
 *.ear
+
+# Maven Files #
+target/
+tree.txt
+
+# Hibernate Files #
+dbdata/
+hbmdlloutput.txt
+
+# Velocity Files #
+velocity.log
+
+# Idea Files #
+.idea/
+telb.iml
+telb.ipr
+atlassian-ide-plugin.xml
+
+# Eclipse Files #
+/.settings
+/.classpath
+/.project
+
+# Git Files #
+*.patch
+
+# Developer Files #
+JBTest.java
+
+# MacOS Files #
+.DS_Store
+*~

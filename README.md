@@ -18,6 +18,12 @@ Actually support **only OGNL** expression language.
         @Parameter(defaultPrefix = TELBConstants.EXPRESSION_LANGUAGE_BINDING)
         private Long parameter;
     }
+    
+### Dependencies version
+
+ - Tapestry5 - 5.3.6
+ - OGNL - 2.7.3
+ - MVEL - **not supported yet**
 
 ### Maven dependency
 

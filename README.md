@@ -7,6 +7,17 @@ Actually support **only OGNL** expression language.
 ### Tapestry template
 
     <t:mypackage.mycomponent myparameter="el:System.currentTimeMillis()"/>
+    
+### Tapestry binding prefix
+
+    import org.apache.tapestry5.annotations.Parameter;
+    import com.github.bednar.TELBConstants;
+
+    public class MySuperComponent
+    {
+        @Parameter(defaultPrefix = TELBConstants.EXPRESSION_LANGUAGE_BINDING)
+        private Long parameter;
+    }
 
 ### Maven dependency
 

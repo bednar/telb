@@ -1,4 +1,4 @@
-TELB - Simplified BSD License
+TELB - New BSD License
 ---------------------
 Copyright (c) 2013, TELB Contributors All rights reserved.
 

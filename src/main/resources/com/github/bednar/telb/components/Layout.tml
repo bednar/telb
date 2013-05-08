@@ -1,0 +1,12 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
+
+<head>
+    <title>Tapestry5 Expression Language Binding</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE"/>
+</head>
+
+<body>
+    <t:body/>
+</body>
+
+</html>

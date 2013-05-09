@@ -64,13 +64,13 @@ TELB support three binding prefix:
         configuration.add(TELBConstants.DEFAULT_EL_SYMBOL, TELBConstants.MVEL);
     }
 
-### Dependencies version
+### Dependencies
 
  - Tapestry5 - 5.3.7
  - OGNL - 2.7.3
  - MVEL - 2.1.4.Final
 
-### Maven dependency
+### Maven
 
 TELB __will be__ in Maven central repository.
 

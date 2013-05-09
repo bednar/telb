@@ -40,4 +40,20 @@ public class DefaultTest extends AbstractUnitTest
 
         Assert.assertEquals("6", integerAdd.getChildMarkup());
     }
+
+    @Test
+    public void hasGenericPropertyString()
+    {
+        Element propertyString = page.getRenderedDocument().getElementById("generic-property-string");
+
+        Assert.assertNotNull(propertyString);
+    }
+
+    @Test
+    public void genericPropertyStringValue()
+    {
+        Element propertyString = page.getRenderedDocument().getElementById("generic-property-string");
+
+        Assert.assertEquals("property value", propertyString.getChildMarkup());
+    }
 }

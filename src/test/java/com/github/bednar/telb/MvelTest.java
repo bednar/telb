@@ -40,4 +40,20 @@ public class MvelTest extends AbstractUnitTest
 
         Assert.assertEquals("6", integerAdd.getChildMarkup());
     }
+
+    @Test
+    public void hasMvelPropertyString()
+    {
+        Element propertyString = page.getRenderedDocument().getElementById("mvel-property-string");
+
+        Assert.assertNotNull(propertyString);
+    }
+
+    @Test
+    public void mvelPropertyStringValue()
+    {
+        Element propertyString = page.getRenderedDocument().getElementById("mvel-property-string");
+
+        Assert.assertEquals("property value", propertyString.getChildMarkup());
+    }
 }

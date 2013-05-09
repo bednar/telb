@@ -1,6 +1,25 @@
 <html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
       t:type="layout">
 
+<h2>Index.java</h2>
+<pre>
+public class Index
+{
+&nbsp;&nbsp;&nbsp;&nbsp;@Property
+&nbsp;&nbsp;&nbsp;&nbsp;private String testingString;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;@SetupRender
+&nbsp;&nbsp;&nbsp;&nbsp;void initValues()
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;testingString = "property value";
+&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;@Nonnull
+&nbsp;&nbsp;&nbsp;&nbsp;public Integer getTestingInteger()
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 5;
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}
+</pre>
+
 <h2>Generic</h2>
 
 <h3>Source</h3>
@@ -22,6 +41,17 @@
 <p>
     <span id="generic-integer-add">
         <t:outputraw value="el:testingInteger + 1"/>
+    </span>
+</p>
+
+<h3>Source</h3>
+<pre>
+        &lt;t:outputraw value=&quot;el:testingString&quot;/&gt;
+</pre>
+<h3>Value</h3>
+<p>
+    <span id="generic-property-string">
+        <t:outputraw value="el:testingString"/>
     </span>
 </p>
 
@@ -49,6 +79,17 @@
     </span>
 </p>
 
+<h3>Source</h3>
+<pre>
+        &lt;t:outputraw value=&quot;ognl:testingString&quot;/&gt;
+</pre>
+<h3>Value</h3>
+<p>
+    <span id="ognl-property-string">
+        <t:outputraw value="ognl:testingString"/>
+    </span>
+</p>
+
 <h2>MVEL</h2>
 
 <h3>Source</h3>
@@ -70,6 +111,17 @@
 <p>
     <span id="mvel-integer-add">
         <t:outputraw value="mvel:testingInteger + 1"/>
+    </span>
+</p>
+
+<h3>Source</h3>
+<pre>
+        &lt;t:outputraw value=&quot;mvel:testingString&quot;/&gt;
+</pre>
+<h3>Value</h3>
+<p>
+    <span id="mvel-property-string">
+        <t:outputraw value="mvel:testingString"/>
     </span>
 </p>
 

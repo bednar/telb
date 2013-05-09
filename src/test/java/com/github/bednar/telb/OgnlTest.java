@@ -40,4 +40,20 @@ public class OgnlTest extends AbstractUnitTest
 
         Assert.assertEquals("6", integerAdd.getChildMarkup());
     }
+
+    @Test
+    public void hasOgnlPropertyString()
+    {
+        Element propertyString = page.getRenderedDocument().getElementById("ognl-property-string");
+
+        Assert.assertNotNull(propertyString);
+    }
+
+    @Test
+    public void ognlPropertyStringValue()
+    {
+        Element propertyString = page.getRenderedDocument().getElementById("ognl-property-string");
+
+        Assert.assertEquals("property value", propertyString.getChildMarkup());
+    }
 }

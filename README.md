@@ -12,11 +12,15 @@ TELB support three binding prefix:
 
 #### Default
 
-    <t:mypackage.mycomponent myparameter="el:@System@currentTimeMillis()"/>
+    <t:mypackage.mycomponent1 parameter="el:@System@currentTimeMillis()"/>
+    
+    <t:mypackage.mycomponent2 parameter="el:currentValue + 1"/>
     
 #### OGNL
 
-    <t:mypackage.mycomponent myparameter="ognl:@System@currentTimeMillis()"/>
+    <t:mypackage.mycomponent1 parameter="ognl:@System@currentTimeMillis()"/>
+    
+    <t:mypackage.mycomponent2 parameter="el:currentValue + 1"/>
     
 #### MVEL
 

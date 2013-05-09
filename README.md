@@ -1,4 +1,4 @@
-# Tapestry5 Expression Language Binding
+# [![Build Status](https://travis-ci.org/bednar/telb.png?branch=master)](https://travis-ci.org/bednar/telb) Tapestry5 Expression Language Binding
 
 ## Description
 

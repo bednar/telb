@@ -4,7 +4,7 @@
 
 TELB support three binding prefix:
 
-1. __el__ - Default expression language
+1. __el__ - Default Expression Language
 2. __ognl__ - Object Graph Navigation Library
 3. __mvel__ - MVFLEX Expression Language
 
@@ -61,7 +61,7 @@ TELB support three binding prefix:
 
  - Tapestry5 - 5.3.7
  - OGNL - 2.7.3
- - MVEL - **not supported yet**
+ - MVEL - 2.1.4.Final
 
 ### Maven dependency
 

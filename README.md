@@ -6,7 +6,7 @@ Actually support **only OGNL** expression language.
 
 ### Tapestry template
 
-    <t:mypackage.mycomponent myparameter="el:System.currentTimeMillis()"/>
+    <t:mypackage.mycomponent myparameter="el:@System@currentTimeMillis()"/>
     
 ### Tapestry binding prefix
 

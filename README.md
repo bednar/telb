@@ -20,11 +20,13 @@ TELB support three binding prefix:
 
     <t:mypackage.mycomponent1 parameter="ognl:@System@currentTimeMillis()"/>
     
-    <t:mypackage.mycomponent2 parameter="el:currentValue + 1"/>
+    <t:mypackage.mycomponent2 parameter="ognl:currentValue + 1"/>
     
 #### MVEL
 
-    <t:mypackage.mycomponent myparameter="mvel:System.currentTimeMillis()"/>
+    <t:mypackage.mycomponent1 parameter="mvel:System.currentTimeMillis()"/>
+    
+    <t:mypackage.mycomponent2 parameter="mvel:currentValue + 1"/>
     
 ### Tapestry binding prefix
 

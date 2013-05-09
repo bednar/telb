@@ -4,7 +4,7 @@
 
 TELB support three binding prefix:
 
-1. __el__ - Default Expression Language
+1. __el__ - Default Expression Language (OGNL)
 2. __ognl__ - Object Graph Navigation Library
 3. __mvel__ - MVFLEX Expression Language
 
@@ -55,6 +55,13 @@ TELB support three binding prefix:
     {
         @Parameter(defaultPrefix = TELBConstants.MVEL)
         private Long parameter;
+    }
+    
+### Overide default expression language
+
+    public void contributeApplicationDefaults(final @Nonnull MappedConfiguration<String, String> configuration)
+    {
+        configuration.add(TELBConstants.DEFAULT_EL_SYMBOL, TELBConstants.MVEL);
     }
 
 ### Dependencies version

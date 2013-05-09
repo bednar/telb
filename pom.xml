@@ -38,9 +38,11 @@
     </developers>
 
     <properties>
-        <dependency.tapestry.version>5.3.7</dependency.tapestry.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <dependency.tapestry>5.3.7</dependency.tapestry>
+        <dependency.ognl>2.7.3</dependency.ognl>
+        <dependency.mvel>2.1.4.Final</dependency.mvel>
     </properties>
 
     <dependencies>
@@ -48,13 +50,52 @@
         <dependency>
             <groupId>org.apache.tapestry</groupId>
             <artifactId>tapestry-core</artifactId>
-            <version>${dependency.tapestry.version}</version>
+            <version>${dependency.tapestry}</version>
         </dependency>
 
         <dependency>
             <groupId>com.google.code.findbugs</groupId>
             <artifactId>jsr305</artifactId>
             <version>2.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ognl</groupId>
+            <artifactId>ognl</artifactId>
+            <version>${dependency.ognl}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mvel</groupId>
+            <artifactId>mvel2</artifactId>
+            <version>${dependency.mvel}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.tapestry</groupId>
+            <artifactId>tapestry-test</artifactId>
+            <version>${dependency.tapestry}</version>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.testng</groupId>
+                    <artifactId>testng</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
+            <scope>test</scope>
         </dependency>
 
     </dependencies>
@@ -125,6 +166,11 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.7.2</version>
+                <configuration>
+                    <excludes>
+                        <exclude>**/AbstractUnitTest.java</exclude>
+                    </excludes>
+                </configuration>
             </plugin>
 
             <plugin>

@@ -1,7 +1,76 @@
 <html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
-      t:type="layout"
-      xmlns:p="tapestry:parameter">
+      t:type="layout">
 
-TODO
+<h2>Generic</h2>
+
+<h3>Source</h3>
+<pre>
+  &lt;t:outputraw value=&quot;el:@System@currentTimeMillis()&quot;/&gt;
+</pre>
+<h3>Value</h3>
+<p>
+    <span id="generic-current-time">
+        <t:outputraw value="el:@System@currentTimeMillis()"/>
+    </span>
+</p>
+
+<h3>Source</h3>
+<pre>
+        &lt;t:outputraw value=&quot;el:testingInteger + 1&quot;/&gt;
+</pre>
+<h3>Value</h3>
+<p>
+    <span id="generic-integer-add">
+        <t:outputraw value="el:testingInteger + 1"/>
+    </span>
+</p>
+
+<h2>OGNL</h2>
+
+<h3>Source</h3>
+<pre>
+  &lt;t:outputraw value=&quot;ognl:@System@currentTimeMillis()&quot;/&gt;
+</pre>
+<h3>Value</h3>
+<p>
+    <span id="ognl-current-time">
+        <t:outputraw value="ognl:@System@currentTimeMillis()"/>
+    </span>
+</p>
+
+<h3>Source</h3>
+<pre>
+        &lt;t:outputraw value=&quot;ognl:testingInteger + 1&quot;/&gt;
+</pre>
+<h3>Value</h3>
+<p>
+    <span id="ognl-integer-add">
+        <t:outputraw value="ognl:testingInteger + 1"/>
+    </span>
+</p>
+
+<h2>MVEL</h2>
+
+<h3>Source</h3>
+<pre>
+  &lt;t:outputraw value=&quot;mvel:System.currentTimeMillis()&quot;/&gt;
+</pre>
+<h3>Value</h3>
+<p>
+    <span id="mvel-current-time">
+        <t:outputraw value="mvel:System.currentTimeMillis()"/>
+    </span>
+</p>
+
+<h3>Source</h3>
+<pre>
+        &lt;t:outputraw value=&quot;mvel:testingInteger + 1&quot;/&gt;
+</pre>
+<h3>Value</h3>
+<p>
+    <span id="mvel-integer-add">
+        <t:outputraw value="mvel:testingInteger + 1"/>
+    </span>
+</p>
 
 </html>

@@ -3,10 +3,19 @@
 <head>
     <title>Tapestry5 Expression Language Binding</title>
     <meta http-equiv="X-UA-Compatible" content="IE=EDGE"/>
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css"
+          rel="stylesheet" type="text/css"/>
+    <link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css"
+          rel="stylesheet" type="text/css"/>
+    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
+<div class="container">
+    <div class="page-header">
+        <h1>Tapestry5 Expression Language Binding</h1>
+    </div>
     <t:body/>
+</div>
 </body>
-
 </html>

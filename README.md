@@ -2,11 +2,25 @@
 
 ## Description
 
-Actually support **only OGNL** expression language.
+TELB support three binding prefix:
+
+1. __el__ - default expression language (OGNL)
+2. __ognl__
+3. __mvel__
 
 ### Tapestry template
 
+#### Default
+
     <t:mypackage.mycomponent myparameter="el:@System@currentTimeMillis()"/>
+    
+#### OGNL
+
+    <t:mypackage.mycomponent myparameter="ognl:@System@currentTimeMillis()"/>
+    
+#### MVEL
+
+    <t:mypackage.mycomponent myparameter="mvel:System.currentTimeMillis()"/>
     
 ### Tapestry binding prefix
 
@@ -26,6 +40,8 @@ Actually support **only OGNL** expression language.
  - MVEL - **not supported yet**
 
 ### Maven dependency
+
+TELB __will be__ in Maven central repository.
 
     <dependency>
         <groupId>com.github.bednar</groupId>

@@ -4,9 +4,9 @@
 
 TELB support three binding prefix:
 
-1. __el__ - default expression language (OGNL)
-2. __ognl__
-3. __mvel__
+1. __el__ - Default expression language
+2. __ognl__ - Object Graph Navigation Library
+3. __mvel__ - MVFLEX Expression Language
 
 ### Tapestry template
 
@@ -24,15 +24,39 @@ TELB support three binding prefix:
     
 ### Tapestry binding prefix
 
+#### Default
+
     import org.apache.tapestry5.annotations.Parameter;
     import com.github.bednar.TELBConstants;
 
     public class MySuperComponent
     {
-        @Parameter(defaultPrefix = TELBConstants.EXPRESSION_LANGUAGE_BINDING)
+        @Parameter(defaultPrefix = TELBConstants.EXPRESSION_LANGUAGE)
         private Long parameter;
     }
     
+#### OGNL
+
+    import org.apache.tapestry5.annotations.Parameter;
+    import com.github.bednar.TELBConstants;
+
+    public class MySuperComponent
+    {
+        @Parameter(defaultPrefix = TELBConstants.OGNL)
+        private Long parameter;
+    }
+    
+#### MVEL
+
+    import org.apache.tapestry5.annotations.Parameter;
+    import com.github.bednar.TELBConstants;
+
+    public class MySuperComponent
+    {
+        @Parameter(defaultPrefix = TELBConstants.MVEL)
+        private Long parameter;
+    }
+
 ### Dependencies version
 
  - Tapestry5 - 5.3.7

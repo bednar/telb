@@ -2,7 +2,7 @@
 
 ## Description
 
-TELB support three binding prefix:
+Support three binding prefix:
 
 1. __el__ - Default Expression Language (OGNL)
 2. __ognl__ - Object Graph Navigation Library
@@ -78,7 +78,7 @@ TELB support three binding prefix:
 
 ### Maven
 
-TELB __will be__ in Maven central repository.
+__Will be__ in Maven central repository.
 
     <dependency>
         <groupId>com.github.bednar</groupId>

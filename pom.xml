@@ -37,6 +37,12 @@
         </developer>
     </developers>
 
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -117,6 +123,26 @@
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.4</version>
+                <configuration>
+                    <archive>
+                        <manifestEntries>
+                            <Tapestry-Module-Classes>com.github.bednar.telb.services.TELBModule</Tapestry-Module-Classes>
+                        </manifestEntries>
+                    </archive>
+                    <excludes>
+                        <exclude>**/AppModule*</exclude>
+                        <exclude>**/Layout*</exclude>
+                        <exclude>**/Index*</exclude>
+                        <exclude>**/PLACEHOLDER</exclude>
+                        <exclude>**/log4j.xml</exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
                 <version>2.1.2</version>
                 <configuration>
@@ -144,22 +170,21 @@
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>2.4</version>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.9</version>
                 <configuration>
-                    <archive>
-                        <manifestEntries>
-                            <Tapestry-Module-Classes>com.github.bednar.telb.services.TELBModule</Tapestry-Module-Classes>
-                        </manifestEntries>
-                    </archive>
-                    <excludes>
-                        <exclude>**/AppModule*</exclude>
-                        <exclude>**/Layout*</exclude>
-                        <exclude>**/Index*</exclude>
-                        <exclude>**/PLACEHOLDER</exclude>
-                        <exclude>**/log4j.xml</exclude>
-                    </excludes>
+                    <sourceFileIncludes>
+                        <include>**\/\TELB*.java</include>
+                        <include>**\/\*Binding*.java</include>
+                    </sourceFileIncludes>
                 </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
 
             <plugin>

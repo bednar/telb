@@ -79,8 +79,8 @@ Support three binding prefix:
 ### Maven
 
 #### Release
-__Will be__ in Maven central repository.
 
+    <!-- From Maven Central Repository -->
     <dependency>
         <groupId>com.github.bednar</groupId>
         <artifactId>telb</artifactId>

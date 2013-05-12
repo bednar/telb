@@ -78,6 +78,7 @@ Support three binding prefix:
 
 ### Maven
 
+#### Release
 __Will be__ in Maven central repository.
 
     <dependency>
@@ -85,7 +86,29 @@ __Will be__ in Maven central repository.
         <artifactId>telb</artifactId>
         <version>1.0.0</version>
     </dependency>
+    
+#### Snapshot
 
+    <dependency>
+        <groupId>com.github.bednar</groupId>
+        <artifactId>telb</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </dependency>
+    
+    <repositories>
+        <repository>
+            <id>sonatype-nexus-snapshots</id>
+            <name>Sonatype Nexus Snapshots</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+    
 ## Links
  - [Tapestry5](http://tapestry.apache.org/), [Bindings](http://tapestry.apache.org/component-parameters.html#ComponentParameters-BindingExpressions)
  - [OGNL](http://commons.apache.org/proper/commons-ognl/)

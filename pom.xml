@@ -44,7 +44,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <dependency.tapestry>5.3.7</dependency.tapestry>
+        <dependency.tapestry>5.8.2</dependency.tapestry>
         <dependency.ognl>2.7.3</dependency.ognl>
         <dependency.mvel>2.1.4.Final</dependency.mvel>
     </properties>
